@@ -6,10 +6,12 @@ version = "1.0-SNAPSHOT"
 val ktorVersion = "1.1.1"
 val logbackVersion = "1.2.3"
 val junitVersion = "5.3.1"
+val kotlinVersion = "1.3.20"
 
 plugins {
     application
-    kotlin("jvm") version "1.3.11"
+    kotlin("jvm") version "1.3.20"
+    id("com.diffplug.gradle.spotless") version "3.18.0"
 }
 
 repositories {
@@ -27,6 +29,7 @@ tasks.withType<KotlinCompile>().all {
 
 application {
     mainClassName = "MainKt"
+    mainClassName = "io.ktor.server.netty.EngineMain"
 }
 
 dependencies {
