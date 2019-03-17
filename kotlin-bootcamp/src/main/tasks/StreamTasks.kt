@@ -26,7 +26,6 @@ class StreamTasks {
         return emptyList()
     }
 
-
     fun inputOfManyTypes(input: List<Any>):  List<Int> {
         //TODO Given a list with Any input, do the following:
         //TODO Return the value of an int, length of a String or list and 1 if a true boolean value

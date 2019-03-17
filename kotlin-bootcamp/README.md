@@ -15,15 +15,3 @@ En kan såklart kjøre testene og jukse litt, men da lærer en jo ikke så mye. 
     Om vi har tilgang til internet i Strømstad er det mye en kan google seg frem til, men prøv gjerne
     å finn ut av ting selv. Om du sitter helt fast er det bare å spørre om hjelp, eventuelt google litt.
     Om internettet viser seg å være helt ras, ligger det en pdf i bootcamp-mappen.
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    oppgaver: forløkker, foreach,map, filter, flatmap, fold
-    Lage mini readmes per oppgavefil. Øverst
