@@ -63,4 +63,8 @@ class StreamTasks {
 
         return 1030
     }
+
+    fun addTwoListsTogether(inputOne: List<Int>, inputTwo: List<Int>): List<Int> {
+            return inputOne.zip(inputTwo) { a, b -> a + b }
+    }
 }

@@ -110,4 +110,13 @@ class StreamTests {
 
         assertEquals(-308880, streamFunctions.foldAndMultiply(testInput))
     }
+
+    @Test
+    fun `test that zip function works correctly`() {
+        val testInputOne = listOf(2, 3, 4, 5, 6, 7)
+        val testInputTwo = listOf(1, 2, 3, 4, 5, 6, 2, 2, 2)
+        val correctResult = listOf(3, 5, 7, 9, 11, 13)
+
+        assertEquals(correctResult, streamFunctions.addTwoListsTogether(testInputOne, testInputTwo))
+    }
 }
