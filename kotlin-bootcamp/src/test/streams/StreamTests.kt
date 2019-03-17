@@ -117,6 +117,6 @@ class StreamTests {
         val testInputTwo = listOf(1, 2, 3, 4, 5, 6, 2, 2, 2)
         val correctResult = listOf(3, 5, 7, 9, 11, 13)
 
-        assertEquals(correctResult, streamFunctions.addTwoListsTogether(testInputOne, testInputTwo))
+        assertEquals(correctResult, streamFunctions.zipTwoListsTogether(testInputOne, testInputTwo))
     }
 }

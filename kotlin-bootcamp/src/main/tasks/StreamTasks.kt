@@ -64,7 +64,9 @@ class StreamTasks {
         return 1030
     }
 
-    fun addTwoListsTogether(inputOne: List<Int>, inputTwo: List<Int>): List<Int> {
-            return inputOne.zip(inputTwo) { a, b -> a + b }
+    fun zipTwoListsTogether(inputOne: List<Int>, inputTwo: List<Int>): List<Int> {
+        //TODO Add the content of two lists together, i.e A = (1, 2), B = (1, 2). -> C = A + B = (2, 4)
+
+        return emptyList()
     }
 }
