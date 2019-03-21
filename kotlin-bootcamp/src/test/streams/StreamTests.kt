@@ -28,6 +28,7 @@ class StreamTests {
         val testInput = listOf(1, 2, 3, 4, 44, 5, 6, 7) 
         val result = streamFunctions.oddNumbersInList(testInput)
 
+        assert(result.isNotEmpty())
         result.forEach { assert(it % 2 != 0) }
     }
 
@@ -124,7 +125,7 @@ class StreamTests {
     @Test
     fun `test mapping of cars`() {
         val testInput = listOf<Car>(Car(2, "test", 3), Car(2, "test", 5), Car(1, "test", 44), Car(2, "test", 9), Car(2, "test", 4))
-        val results = streamFunctions.mapCarsWithHighFuelConsumption(testInput)
+        val results = streamFunctions.findVehiclesWithHighFuelConsumption(testInput)
 
         results.forEach {
             assert(it.fuelConsumption > 5)

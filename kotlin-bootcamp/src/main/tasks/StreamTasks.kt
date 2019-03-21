@@ -73,7 +73,7 @@ class StreamTasks {
         return emptyList()
     }
 
-    fun mapCarsWithHighFuelConsumption(input: List<Car>): List<Vehicle> {
+    fun findVehiclesWithHighFuelConsumption(input: List<Car>): List<Vehicle> {
         //TODO Map all cars with a fuel consumption higher than 5 to vehicles
 
         return emptyList()
