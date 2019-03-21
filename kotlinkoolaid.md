@@ -58,7 +58,7 @@ Ktor er et webrammeverk laget i Kotlin, for Kotlin. Vi har laget en liten start
 på dette webrammeverket sånn at det skal være lett å bygge videre på dette.
 Koden ligger under "ktor-example" på GitHub-repoet.
 
-### Kilde
+## Kilder
 - [Kotlin koolaid](https://github.com/knowit/kotlin-koolaid)
 - [Kotlin Koans installasjon, oppsett og bruk](https://www.jetbrains.com/help/education/learner-start-guide.html?section=Kotlin%20Koans)
 - [Kotlin Koans Online](https://play.kotlinlang.org/koans/Introduction/)
