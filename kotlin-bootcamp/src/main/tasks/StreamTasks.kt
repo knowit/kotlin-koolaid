@@ -1,5 +1,8 @@
 package tasks
 
+import dataclasses.Car
+import dataclasses.Vehicle
+
 class StreamTasks {
 
     fun sumOfList(input: List<Int>): Int {
@@ -34,13 +37,13 @@ class StreamTasks {
     }
 
     fun addOneUsingForEach(input: List<Int>): List<Int> {
-        //TODO Add one to each list element using for each
+        //TODO Add one to each list element using for each, x+1
 
         return emptyList()
     }
 
     fun addOneUsingMap(input: List<Int>): List<Int> {
-        //TODO Add one to each list element using for map
+        //TODO Add one to each list element using map, x+1
 
         return emptyList()
     }
@@ -66,6 +69,12 @@ class StreamTasks {
 
     fun zipTwoListsTogether(inputOne: List<Int>, inputTwo: List<Int>): List<Int> {
         //TODO Add the content of two lists together, i.e A = (1, 2), B = (1, 2). -> C = A + B = (2, 4)
+
+        return emptyList()
+    }
+
+    fun mapCarsWithHighFuelConsumption(input: List<Car>): List<Vehicle> {
+        //TODO Map all cars with a fuel consumption higher than 5 to vehicles
 
         return emptyList()
     }

@@ -1,5 +1,6 @@
 package streams
 
+import dataclasses.Car
 import tasks.StreamTasks
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
@@ -23,7 +24,7 @@ class StreamTests {
     }
     
     @Test
-    fun `check that the returned list only containts odd numbers`() {
+    fun `check that the returned list only contains odd numbers`() {
         val testInput = listOf(1, 2, 3, 4, 44, 5, 6, 7) 
         val result = streamFunctions.oddNumbersInList(testInput)
 
@@ -118,5 +119,16 @@ class StreamTests {
         val correctResult = listOf(3, 5, 7, 9, 11, 13)
 
         assertEquals(correctResult, streamFunctions.zipTwoListsTogether(testInputOne, testInputTwo))
+    }
+
+    @Test
+    fun `test mapping of cars`() {
+        val testInput = listOf<Car>(Car(2, "test", 3), Car(2, "test", 5), Car(1, "test", 44), Car(2, "test", 9), Car(2, "test", 4))
+        val results = streamFunctions.mapCarsWithHighFuelConsumption(testInput)
+
+        results.forEach {
+            assert(it.fuelConsumption > 5)
+        }
+        assertEquals(testInput.filter { it.fuelConsumption > 5 }.size, results.size)
     }
 }
