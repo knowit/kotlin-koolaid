@@ -11,13 +11,13 @@ fun main() {
 
 private fun calculateAndCombineCallbacks() {
     heavyCalculationAsync { firstResult ->
-        runOnUI {
+        runOnUi {
             updateUi("Result from heavy calculation is: $firstResult")
             anotherHeavyCalculationAsync { secondResult ->
-                runOnUI {
+                runOnUi {
                     updateUi("Result from another heavy calculation is: $secondResult")
                     combineResultsAsync(firstResult, secondResult) { combined ->
-                        runOnUI {
+                        runOnUi {
                             updateUi("Combined result is: $combined")
                         }
                     }

@@ -8,35 +8,35 @@ import kotlin.coroutines.CoroutineContext
 private const val UI_THREAD_NAME = "UI Thread"
 private var running = true
 
-private val blockingQueue: BlockingQueue<() -> Unit> = LinkedBlockingDeque()
-private fun queueUiUpdateJob() {
-    runOnUI {
+private val uiJobQueue: BlockingQueue<() -> Unit> = LinkedBlockingDeque()
+private fun enqueueUiUpdateJob() {
+    runOnUi {
         Thread.sleep(1000)
         updateUi("Another UI update")
-        queueUiUpdateJob()
+        enqueueUiUpdateJob()
     }
 }
 
 fun startUiHandler() {
     thread(start = true, name = UI_THREAD_NAME) {
         while (running) {
-            blockingQueue.take()()
+            uiJobQueue.take()()
         }
     }
     // This implements the Main Dispatcher, so we easily can run coroutines on the UI thread.
     Dispatchers.setMain(object : CoroutineDispatcher() {
         override fun dispatch(context: CoroutineContext, block: Runnable) {
-            runOnUI { block.run() }
+            runOnUi { block.run() }
         }
     })
-    queueUiUpdateJob()
+    enqueueUiUpdateJob()
 }
 
 /**
  * Run a lambda on the UI Thread.
  */
-fun runOnUI(job: () -> Unit) {
-    blockingQueue.put(job)
+fun runOnUi(job: () -> Unit) {
+    uiJobQueue.put(job)
 }
 
 /**
