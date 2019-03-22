@@ -27,17 +27,20 @@ fun main() {
 
 private suspend fun heavyCalculation(): Int {
     TODO("Implement so you can call this from a coroutine running on the UI (Main) Dispatcher, " +
-            "without blocking the UI Thread, and without starting another coroutine")
+            "without blocking the UI Thread, and without starting another coroutine" +
+            "This function should call the heavyCalculationBlocking() function")
 }
 
 private suspend fun anotherHeavyCalculation(): Int {
     TODO("Implement so you can call this from a coroutine running on the UI (Main) Dispatcher, " +
-            "without blocking the UI Thread, and without starting another coroutin")
+            "without blocking the UI Thread, and without starting another coroutine" +
+            "This function should call the anotherHeavyCalculationBlocking() function")
 }
 
 suspend fun combineResults(first: Int, second: Int): Int {
     TODO("Implement so you can call this from a coroutine running on the UI (Main) Dispatcher, " +
-            "without blocking the UI Thread, and without starting another coroutin")
+            "without blocking the UI Thread, and without starting another coroutine" +
+            "This function should call the combineResultsBlocking() function")
 }
 
 
