@@ -18,10 +18,23 @@ While the *suspend* keyword is part of the core language.
 The most important aspect of coroutines is that a coroutine is able to suspend the current
 execution, run another coroutine for a while, and then resume the first one.
 
+### Examples and code exercises
+The code examples and exercises in this project is supposed to just be run from
+inside IntelliJ itself. There's a Play icon next to the main methods definitions
+that you can use to compile and run the main methods.
+
+You're supposed to go through the files in the src/main/kotlin directory lexicographically.
+The files that don't start with a number are just helper files.
+
 ### Builders
 
 In the file 01-StartingCoroutines.kt there's some examples on how the
 different coroutine builders work.
+
+### Suspend keyword
+The *suspend* keyword is used to mark that a function can be suspended, and
+later resumed. A suspend function can only be called from a coroutine, or
+from another suspend function.
 
 ### Asynchronous / non-blocking programming
 

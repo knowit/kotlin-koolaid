@@ -27,27 +27,32 @@ fun main() {
 
 private suspend fun heavyCalculation(): Int {
     TODO("Implement so you can call this from a coroutine running on the UI (Main) Dispatcher, " +
-            "without blocking the UI Thread, and without starting another coroutine")
+            "without blocking the UI Thread, and without starting another coroutine" +
+            "This function should call the heavyCalculationBlocking() function")
 }
 
 private suspend fun anotherHeavyCalculation(): Int {
     TODO("Implement so you can call this from a coroutine running on the UI (Main) Dispatcher, " +
-            "without blocking the UI Thread, and without starting another coroutin")
+            "without blocking the UI Thread, and without starting another coroutine" +
+            "This function should call the anotherHeavyCalculationBlocking() function")
 }
 
 suspend fun combineResults(first: Int, second: Int): Int {
     TODO("Implement so you can call this from a coroutine running on the UI (Main) Dispatcher, " +
-            "without blocking the UI Thread, and without starting another coroutin")
+            "without blocking the UI Thread, and without starting another coroutine" +
+            "This function should call the combineResultsBlocking() function")
 }
 
+// Hint: to implement the suspend functions in this file,
+// read about the withContext function and the different dispatchers above
 
 private fun calculateAndCombineCoroutinesSequential() {
     // TODO:
     // Implement the suspend versions of the calculations above
-    // In this method, launch a coroutine on the Main Dispatcher
+    // In this method, launch a coroutine on the Main Dispatcher with the launch coroutine builder.
     // From that coroutine:
-    // first call heavyCalculation, and then call updateUi with the result
-    // then call anotherHeavyCalculation, and then call updateUi with the result
-    // Lastly call combineResults, and then call updateUi with the result
+    // first call heavyCalculation(), and then call updateUi() with the result
+    // then call anotherHeavyCalculation(), and then call updateUi() with the result
+    // Lastly call combineResults(), and then call updateUi() with the result
     // The output from main should be similar to the output from the callback based version in 02B
 }
