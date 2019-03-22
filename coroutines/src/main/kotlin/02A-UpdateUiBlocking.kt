@@ -20,6 +20,11 @@
 
 // In all of these main functions, we first start the startUiHandler, that will "update" the UI
 // (by printing "UI thread: Another UI update") every second, unless the UI thread is blocked.
+// Then after 3 seconds, we start to run two calculations, and then a function that combine the
+// results from those two calculations. We do this just once.
+
+// The goal of the following exercises is to se how we can run those three functions without
+// blocking the UI from updating each second.
 
 
 fun main() {
