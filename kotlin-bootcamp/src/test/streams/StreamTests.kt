@@ -107,6 +107,13 @@ class StreamTests {
     }
 
     @Test
+    fun `test fold and multiply method with final zero 2`() {
+        val testInput = listOf(1,2,0, 4)
+
+        assertEquals(8, streamFunctions.foldAndMultiply(testInput))
+    }
+
+    @Test
     fun `test fold and multiply method long input list`() {
         val testInput = listOf(2,2,0, 12, 9, -4, 5, 10, 1)
 
