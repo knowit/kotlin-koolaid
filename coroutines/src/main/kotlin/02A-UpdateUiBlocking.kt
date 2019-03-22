@@ -18,6 +18,9 @@
 // This is just meant as an example of what happens when blocking, and how to
 // wrongly perform long running tasks.
 
+// In all of these main functions, we first start the startUiHandler, that will "update" the UI
+// (by printing "UI thread: Another UI update") every second, unless the UI thread is blocked.
+
 
 fun main() {
     startUiHandler()
