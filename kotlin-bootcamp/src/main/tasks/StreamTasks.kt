@@ -63,7 +63,7 @@ class StreamTasks {
     fun foldAndMultiply(input: List<Int>): Int {
         //TODO Write a function, that using fold add the entries together and times the next entry with the sum of the previous entries.
         //TODO Example, given (2, 2, 2) -> 2 + 2*2 + 2*6 = 18. If total sum is zero, it should not be used to multiply the next value
-        //TODO Example, given (1, 2, 0, 4) -> 1 + 1*2 + 0 + 2*4 = 8
+        //TODO Example, given (1, 2, 0, 4) -> 1 + 1*2 + 0 + 3*4 = 15
 
         return 1030
     }

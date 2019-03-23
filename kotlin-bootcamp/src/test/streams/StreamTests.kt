@@ -1,9 +1,9 @@
 package streams
 
 import dataclasses.Car
+import org.junit.jupiter.api.Assertions.assertEquals
 import tasks.StreamTasks
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class StreamTests {
 
@@ -110,7 +110,7 @@ class StreamTests {
     fun `test fold and multiply method with final zero 2`() {
         val testInput = listOf(1,2,0, 4)
 
-        assertEquals(8, streamFunctions.foldAndMultiply(testInput))
+        assertEquals(15, streamFunctions.foldAndMultiply(testInput))
     }
 
     @Test

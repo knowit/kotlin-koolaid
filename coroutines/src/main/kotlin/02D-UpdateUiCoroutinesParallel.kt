@@ -1,3 +1,4 @@
+import kotlinx.coroutines.runBlocking
 
 // In this exercise, we will do some of the work in parallel
 
@@ -9,6 +10,14 @@ fun main() {
 
 private fun calculateAndCombineCoroutinesParallel() {
     // TODO:
+
+    while (true) {
+        runBlocking {
+
+
+
+        }
+    }
     // In this version, we want to do the two first calculations in parallel
     //
     // So, first launch a coroutine on the Main Dispatcher

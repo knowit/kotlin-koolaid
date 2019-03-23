@@ -10,15 +10,15 @@ import kotlin.system.measureTimeMillis
 
 fun main() {
     val time = measureTimeMillis {
-        heavyCalculationBlocking()
+        //heavyCalculationBlocking()
 
         // f01startWithLaunch()
-        // f02startWithLaunchThenSleep()
+         //f02startWithLaunchThenSleep()
         // f03startWithRunBlocking()
         // f04launchInsideRunBlocking()
         // f05launchAndJoinInsideRunBlocking()
         // f06startWithAsync()
-        // f06startWithAsyncInParallel()
+        f07startWithAsyncInParallel()
     }
     println("Main took $time milliseconds")
 }
